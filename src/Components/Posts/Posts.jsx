@@ -7,10 +7,10 @@ function Posts() {
 		<div className='posts'>
 			{post.map(post => (
 				<Post
-					key={post.id}
-					id={post.id}
-					image={post.image}
 					category={post.category}
+					image={post.image}
+					id={post.id}
+					key={post.id}
 					overview={post.overview}
 					time={post.time}
 					title={post.title}

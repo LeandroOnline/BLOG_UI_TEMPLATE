@@ -1,7 +1,33 @@
 .categories {
 	display: flex;
 	justify-content: space-around;
+	animation: categorie;
+	animation-duration: 0.5s;
 }
+
+@keyframes categorie {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+/* .categories-out {
+	display: flex;
+	justify-content: space-around;
+	animation: categorie-out;
+	animation-duration: 2s;
+}
+@keyframes categorie-out{
+	0%{
+		transform: translateY(0%);
+	}
+	100%{
+		transform: translateY(-100%);
+	}
+} */
 
 .categoriesbutton {
 	padding: 10px;
@@ -9,6 +35,18 @@
 	border-style: none;
 }
 
+@media (max-width: 500px) {
+	.categories {
+		flex-direction: column;
+	}
+	/* .categories-out {
+		flex-direction: column;
+	} */
+}
 .categoriesbutton:hover {
 	background-color: rgb(255, 255, 255);
+}
+
+.categoriesbutton:focus {
+	background-color: rgb(206, 206, 206);
 }

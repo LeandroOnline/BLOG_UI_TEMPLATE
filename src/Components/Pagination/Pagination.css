@@ -1,0 +1,31 @@
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* gap: 15px; */
+}
+
+.pagination button {
+	width: 100px;
+	margin-top: 20px;
+	border-width: 1px;
+}
+
+.buttonleft {
+	border-radius: 20px 0px 0px 20px;
+}
+
+.buttonleft:hover {
+	background-color: gainsboro;
+}
+
+.buttonrigth {
+	border-radius: 0px 20px 20px 0px;
+	/* clip-path: polygon(0% 00%, 0% 0%, 0% 0%, 50% 50%); */
+	/* border-end-end-radius: 10px; */
+}
+
+.buttonrigth:hover {
+	background-color: gainsboro;
+}

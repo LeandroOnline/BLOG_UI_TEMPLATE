@@ -3,4 +3,16 @@
 	gap: 20px;
 	grid-template-columns: repeat(auto-fill, minmax(300px, auto));
 	margin: 20px;
+	justify-content: center;
+}
+
+.post-pagination {
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 500px) {
+	.post-pagination {
+		flex-direction: column-reverse;
+	}
 }

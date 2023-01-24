@@ -1,32 +1,29 @@
 import Post from './Post/Post';
 import Loading from '../../utilities/Loading';
 import './Posts.css';
-import Get from '../../utilities/Get';
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { context } from '../../App';
+import Pagination from '../Pagination/Pagination';
 
 function Posts() {
-	const [state, setState] = useState(false);
 	const globalstate = useContext(context);
-	useEffect(() => {
-		Get(globalstate.categorie).then(data => {
-			setState(data);
-			globalstate.setNews(data);
-		});
-	}, [globalstate.categorie]);
 
-	if (!state) return <Loading />;
-
+	if (!globalstate.news) return <Loading />;
 	return (
-		<div className='posts'>
-			{state.data?.map(post => (
-				<Post
-					author={post.title}
-					imageUrl={post.imageUrl}
-					key={post.id}
-					id={post.id}
-				/>
-			))}
+		<div className='post-pagination'>
+			<Pagination />
+			<div className='posts'>
+				{globalstate.news.data
+					?.slice(globalstate.page.start, globalstate.page.end)
+					?.map(post => (
+						<Post
+							author={post.title}
+							imageUrl={post.imageUrl}
+							key={post.id}
+							id={post.id}
+						/>
+					))}
+			</div>
 		</div>
 	);
 }

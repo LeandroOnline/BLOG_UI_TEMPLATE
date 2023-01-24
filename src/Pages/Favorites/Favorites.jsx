@@ -1,41 +1,33 @@
+import { useContext, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
+import { context } from '../../App';
+import Post from '../../Components/Posts/Post/Post';
 import './Favorites.css';
 
 function Favorites() {
+	const globalstate = useContext(context);
+
+	useEffect(() => {
+		console.log('change favorite app');
+	}, [globalstate.favorite]);
+
+	if (globalstate.favorite.length === 0) return <Navigate to='/news' />;
+
 	return (
-		<div className='writeconteiner'>
-			<div className='writee'>
-				<img
-					className='writeimg'
-					src='https://c4.wallpaperflare.com/wallpaper/946/632/921/espacio-estrellas-naturaleza-planetas-wallpaper-preview.jpg'
-					alt='img'
-				/>
-				<form action='' className='writeform'>
-					<div className='writetitle'>
-						<label htmlFor='fileid'>
-							<i className='fas fa-plus'></i>
-						</label>
-						<input id='fileid' type='file' style={{ display: 'none' }} />
-						<input
-							type='text'
-							className='writeinput'
-							autoFocus={true}
-							placeholder='Title'
+		<div className='favoritesconteiner'>
+			{globalstate.favorite?.map((id, index) => {
+				const fav = globalstate.news.data.filter(index => index.id === id);
+				if (globalstate.news.data) {
+					return (
+						<Post
+							author={fav[0].title}
+							imageUrl={fav[0].imageUrl}
+							key={index}
+							id={fav[0].id}
 						/>
-					</div>
-					<textarea
-						className='writearea'
-						name=''
-						id=''
-						cols='30'
-						rows='10'
-						placeholder='Tell your story...'
-					></textarea>
-					<br />
-					<button className='writebutton2' type='submit'>
-						Publish
-					</button>
-				</form>
-			</div>
+					);
+				} else return null;
+			})}
 		</div>
 	);
 }

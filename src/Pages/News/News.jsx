@@ -3,7 +3,7 @@ import Posts from '../../Components/Posts/Posts';
 
 import './News.css';
 
-function Home() {
+function News() {
 	return (
 		<div className='home'>
 			<div>
@@ -14,4 +14,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default News;

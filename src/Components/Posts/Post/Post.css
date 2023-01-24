@@ -1,21 +1,25 @@
 .post {
 	width: 100%;
-	height: 100%;
+	max-width: 300px;
+	min-width: 200px;
+	height: 300px;
 	background: rgb(239, 239, 239);
 	padding: 0.4em;
 	border-radius: 30px;
-	color: white;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(212, 212, 212);
 }
 
 .post:hover {
-	background: rgb(134, 133, 133);
+	background: rgb(197, 197, 197);
 }
 
 .Link {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 100%;
+	height: 90%;
 	width: 100%;
 	cursor: pointer;
 	font-family: Josefin Sans, Arial, Helvetica, sans-serif;
@@ -32,5 +36,28 @@
 .h1 {
 	height: 0px;
 	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
 	color: black;
+}
+
+.favorite {
+	width: 40px;
+	position: absolute;
+}
+
+.postbutton {
+	border-style: none;
+	position: absolute;
+}
+
+.favorite:hover {
+	border-style: solid;
+	border-image-width: 5px;
+	border-color: rgb(255, 255, 255);
+	border-radius: 100%;
+}
+
+.favorite:active {
+	border-color: rgb(0, 0, 0);
 }

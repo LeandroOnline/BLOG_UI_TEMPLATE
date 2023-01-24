@@ -3,40 +3,52 @@ import { context } from '../../App';
 import './categories.css';
 
 function Categories() {
-	const { setCategorie } = useContext(context);
-	return (
-		<div className='categories'>
-			<button
-				onClick={() => setCategorie('business')}
-				className='categoriesbutton'
+	const globalstate = useContext(context);
+
+	if (globalstate.menu) {
+		return (
+			<div
+				onClick={() => {
+					globalstate.setPage({ start: 0, end: 8 });
+					globalstate.setFavorite([]);
+					globalstate.setOut(!globalstate.out);
+					globalstate.setMenu(false);
+				}}
+				// className={globalstate.out?'categories-out':'categories'}
+				className='categories'
 			>
-				Business
-			</button>
-			<button
-				onClick={() => setCategorie('technology')}
-				className='categoriesbutton'
-			>
-				Technology
-			</button>
-			<button
-				onClick={() => setCategorie('startup')}
-				className='categoriesbutton'
-			>
-				Startup
-			</button>
-			<button
-				onClick={() => setCategorie('science')}
-				className='categoriesbutton'
-			>
-				Science
-			</button>
-			<button
-				onClick={() => setCategorie('world')}
-				className='categoriesbutton'
-			>
-				World
-			</button>
-		</div>
-	);
+				<button
+					onClick={() => globalstate.setCategorie(globalstate.theme[0])}
+					className='categoriesbutton'
+				>
+					Technology
+				</button>
+				<button
+					onClick={() => globalstate.setCategorie(globalstate.theme[1])}
+					className='categoriesbutton'
+				>
+					Business
+				</button>
+				<button
+					onClick={() => globalstate.setCategorie(globalstate.theme[2])}
+					className='categoriesbutton'
+				>
+					Startup
+				</button>
+				<button
+					onClick={() => globalstate.setCategorie(globalstate.theme[3])}
+					className='categoriesbutton'
+				>
+					Science
+				</button>
+				<button
+					onClick={() => globalstate.setCategorie(globalstate.theme[4])}
+					className='categoriesbutton'
+				>
+					World
+				</button>
+			</div>
+		);
+	}
 }
 export default Categories;

@@ -1,21 +1,36 @@
 a {
-	color: rgb(34, 34, 34);
+	color: rgb(255, 255, 255);
 }
 
 .top {
-	background-color: rgb(255, 255, 255);
+	background-color: rgb(18, 0, 129);
 	display: flex;
 	flex-direction: row;
 	font-weight: 300;
+	grid-column-gap: 0;
 	font-family: Josefin Sans, sans-serif;
-	justify-content: space-around;
 	position: sticky;
-	padding: 16px;
-	top: 0;
-	width: 100%;
 	z-index: 1;
 }
 
 .top :hover {
 	color: rgb(138, 138, 138);
+}
+
+.inclined-button {
+	/* transform: skewX(-30deg); */
+	background-color: rgb(17, 0, 130);
+	height: 50px;
+	border: none;
+	padding: 15px;
+	align-items: center;
+	justify-content: center;
+	color: rgb(255, 255, 255);
+}
+
+.inclined-button:focus {
+	background-color: rgb(43, 0, 255);
+	border: none;
+	outline: none;
+	border-bottom: 3px solid white;
 }

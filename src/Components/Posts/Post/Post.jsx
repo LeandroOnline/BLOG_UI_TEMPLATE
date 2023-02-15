@@ -36,5 +36,5 @@ function Post(props) {
 		</div>
 	);
 }
-
+// proceso
 export default Post;

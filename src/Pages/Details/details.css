@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 15px;
-	background-color: rgb(218, 218, 218);
+	margin-top: 15px;
 }
 
 .detailsconteiner img {

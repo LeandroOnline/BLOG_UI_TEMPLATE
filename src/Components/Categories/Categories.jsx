@@ -1,10 +1,11 @@
 import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { context } from '../../App';
 import './categories.css';
 
 function Categories() {
 	const globalstate = useContext(context);
-
+	const Navigate = useNavigate();
 	if (globalstate.menu) {
 		return (
 			<div
@@ -13,8 +14,8 @@ function Categories() {
 					globalstate.setFavorite([]);
 					globalstate.setOut(!globalstate.out);
 					globalstate.setMenu(false);
+					Navigate('/news');
 				}}
-				// className={globalstate.out?'categories-out':'categories'}
 				className='categories'
 			>
 				<button

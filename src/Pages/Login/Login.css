@@ -1,20 +1,18 @@
 .login {
 	align-items: center;
-	background: linear-gradient(rgb(255, 255, 255), rgba(0, 0, 0, 0)),
-		url(https://www.juancmejia.com/wp-content/uploads/2017/04/Transformaci%C3%B3n-digital-en-el-ADN-de-la-empresa.jpg);
+	background-color: rgb(69,123,157);
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 50px);
 	justify-content: center;
-	color: white;
+	color: rgb(241,250,238);
 }
 
 .logincontainer {
-	border: 1px solid #0000009e;
 	padding: 15px;
 	border-radius: 10px;
-	background-color: rgba(10, 1, 63, 0.504);
+	background-color: rgb(30,51,85);
 }
 
 .logintitle {
@@ -38,7 +36,7 @@
 }
 
 .loginForm input {
-	background-color: #fff;
+	background-color: rgb(241,250,238);
 	border: none;
 	border-radius: 10px;
 	font-size: 13px;
@@ -48,7 +46,7 @@
 }
 
 .loginFormbutton {
-	background-color: rgb(19, 0, 129);
+	background-color: rgb(69,123,157);
 	border: none;
 	border-radius: 10px;
 	color: #fff;
@@ -60,5 +58,5 @@
 }
 
 .loginFormbutton:hover {
-	background-color: rgb(43, 0, 255);
+	background-color: rgb(167,218,220);
 }

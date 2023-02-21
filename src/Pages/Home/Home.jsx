@@ -9,7 +9,7 @@ function Home() {
 	const globalstate = useContext(context);
 	// console.log("Carga de Home");
 	return (
-		<>
+		<div className='all'>
 			<Categories />
 
 			<div className='titles'>
@@ -60,7 +60,7 @@ function Home() {
 					/>
 				</Link>
 			</div>
-		</>
+		</div>
 	);
 }
 

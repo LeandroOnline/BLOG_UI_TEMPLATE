@@ -3,7 +3,7 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	/* gap: 15px; */
+	background-color: rgb(69,123,157);
 }
 
 .pagination button {
@@ -14,18 +14,21 @@
 
 .buttonleft {
 	border-radius: 20px 0px 0px 20px;
+	background-color: rgb(30,52,86);
+	color: rgb(241,250,238)
 }
 
 .buttonleft:hover {
-	background-color: gainsboro;
+	background-color: rgba(30, 52, 86, 0.627);
+
 }
 
 .buttonrigth {
 	border-radius: 0px 20px 20px 0px;
-	/* clip-path: polygon(0% 00%, 0% 0%, 0% 0%, 50% 50%); */
-	/* border-end-end-radius: 10px; */
+	background-color: rgb(30,52,86);
+	color: rgb(241,250,238)
 }
 
 .buttonrigth:hover {
-	background-color: gainsboro;
+	background-color: rgba(30, 52, 86, 0.627);
 }

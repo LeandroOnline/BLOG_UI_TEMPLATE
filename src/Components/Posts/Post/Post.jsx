@@ -23,7 +23,7 @@ function Post(props) {
 			<button onClick={() => addFavorite()} className='postbutton'>
 				<img
 					className='favorite'
-					src='https://cdn-icons-png.flaticon.com/512/4310/4310180.png'
+					src='https://www.emojiall.com/cdn-cgi/mirage/e48b671dd5698420a42ed1c494b6bd1919ab40131a7684e6eb445882836938c7/1280/en/svg-to-png/openmoji/640/1F90D.png'
 					alt='favorite'
 				/>
 			</button>

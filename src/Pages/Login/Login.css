@@ -1,18 +1,18 @@
 .login {
 	align-items: center;
-	background-color: rgb(69,123,157);
+	background-color: rgb(69, 123, 157);
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 50px);
 	justify-content: center;
-	color: rgb(241,250,238);
+	color: rgb(241, 250, 238);
 }
 
 .logincontainer {
 	padding: 15px;
 	border-radius: 10px;
-	background-color: rgb(30,51,85);
+	background-color: rgb(30, 51, 85);
 }
 
 .logintitle {
@@ -36,7 +36,7 @@
 }
 
 .loginForm input {
-	background-color: rgb(241,250,238);
+	background-color: rgb(241, 250, 238);
 	border: none;
 	border-radius: 10px;
 	font-size: 13px;
@@ -46,7 +46,7 @@
 }
 
 .loginFormbutton {
-	background-color: rgb(69,123,157);
+	background-color: rgb(69, 123, 157);
 	border: none;
 	border-radius: 10px;
 	color: #fff;
@@ -58,5 +58,5 @@
 }
 
 .loginFormbutton:hover {
-	background-color: rgb(167,218,220);
+	background-color: rgb(167, 218, 220);
 }

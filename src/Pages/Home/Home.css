@@ -1,26 +1,26 @@
-.all{
-	background-color: rgb(69,123,157);
+.all {
+	background-color: rgb(69, 123, 157);
 }
 
 .blog {
+	color: rgb(241, 250, 238);
 	font-size: 100px;
-	color: rgb(241,250,238);
 }
 
 .header {
-	display: flex;
-	justify-content: center;
 	align-items: center;
+	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	height: 100%;
 }
 
-.header a{
+.header a {
 	width: 70%;
 }
 
-@media (max-width: 600px){
-	.header a{
+@media (max-width: 600px) {
+	.header a {
 		width: 100%;
 	}
 }
@@ -31,7 +31,7 @@
 	width: 100%;
 }
 
-.img:hover{
+.img:hover {
 	opacity: 60%;
 }
 
@@ -40,27 +40,10 @@
 	animation-duration: 1.5s;
 	animation-direction: reverse;
 }
-@keyframes slide {
-	0% {
-		transform: translateX(0%);
-	}
-	100% {
-		transform: translateX(100%);
-	}
-}
 
 .img2 {
 	animation: slide2;
 	animation-duration: 1.5s;
-}
-
-@keyframes slide2 {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(0%);
-	}
 }
 
 .reactNode {
@@ -76,8 +59,26 @@
 	position: relative;
 }
 
-@media (max-width:600px){
-	.blog{
+@media (max-width: 600px) {
+	.blog {
 		font-size: 50px;
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes slide2 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
 	}
 }

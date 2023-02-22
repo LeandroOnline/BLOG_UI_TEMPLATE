@@ -13,11 +13,11 @@ import Get from './utilities/Get';
 export const context = createContext();
 
 const App = () => {
-	const [state, setState] = useState(false); // logeado o no
+	const [state, setState] = useState(false); 
 	const theme = ['technology', 'business', 'startup', 'science', 'world'];
 	const [categorie, setCategorie] = useState(theme[0]);
-	const [news, setNews] = useState([]); // sera un [{},{}]
-	const [page, setPage] = useState({ start: 0, end: 8 }); // pagina de 8 news
+	const [news, setNews] = useState([]); 
+	const [page, setPage] = useState({ start: 0, end: 8 });
 	const [favorite, setFavorite] = useState([]);
 	const [menu, setMenu] = useState(false);
 	const [out, setOut] = useState(true);
@@ -26,7 +26,6 @@ const App = () => {
 		Get(categorie)
 			.then(data => {
 				setNews(data);
-				console.log('Data App');
 			})
 			.catch(e => {
 				console.log('Error en API: ' + categorie);

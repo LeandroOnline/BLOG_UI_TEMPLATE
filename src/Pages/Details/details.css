@@ -1,16 +1,16 @@
 .detailsconteiner {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	gap: 15px;
+	justify-content: center;
 	margin-top: 15px;
 }
 
 .detailsconteiner img {
-	width: 90%;
 	height: 500px;
 	object-fit: cover;
+	width: 90%;
 }
 
 .detailsconteiner p {

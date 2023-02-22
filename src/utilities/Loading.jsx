@@ -7,7 +7,6 @@ const Loading = () => {
 				<div className={styles.face}>
 					<div className={styles.circle}></div>
 				</div>
-				{/* <FaSpinner size={50} className={styles.spinning}/> */}
 				<div className={styles.face}>
 					<div className={styles.circle}></div>
 				</div>

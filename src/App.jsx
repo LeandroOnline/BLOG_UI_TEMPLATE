@@ -13,10 +13,10 @@ import Get from './utilities/Get';
 export const context = createContext();
 
 const App = () => {
-	const [state, setState] = useState(false); 
+	const [state, setState] = useState(false);
 	const theme = ['technology', 'business', 'startup', 'science', 'world'];
 	const [categorie, setCategorie] = useState(theme[0]);
-	const [news, setNews] = useState([]); 
+	const [news, setNews] = useState([]);
 	const [page, setPage] = useState({ start: 0, end: 8 });
 	const [favorite, setFavorite] = useState([]);
 	const [menu, setMenu] = useState(false);

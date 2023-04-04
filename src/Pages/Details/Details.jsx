@@ -34,3 +34,5 @@ function Details() {
 	);
 }
 export default Details;
+
+// OK

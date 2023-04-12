@@ -6,12 +6,10 @@ import axios from 'axios';
 
 const API = 'http://localhost:3000/api/logout';
 
-
 function Top() {
-
-	const logout = ()=>{
-		axios.get(API).then(()=> console.log('token eliminado'))
-	}
+	const logout = () => {
+		axios.get(API).then(() => console.log('token eliminado'));
+	};
 
 	const state = useContext(context);
 	return (
@@ -49,7 +47,10 @@ function Top() {
 				<>
 					<button
 						className=' inclined-button'
-						onClick={() => {logout(); state.setState(false)}}
+						onClick={() => {
+							logout();
+							state.setState(false);
+						}}
 					>
 						<i className='fas fa-sign-out-alt' />
 					</button>

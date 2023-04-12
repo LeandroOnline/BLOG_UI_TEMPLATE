@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { context } from '../../../App';
 import './Post.css';
-import favorito from '../../../assets/favorito.png'
+import favorito from '../../../assets/favorito.png';
 
 // A los favoritos los guardo en un arreglo en globalstate con los id [id,id,id] y luego los busco en news y los muestro en la page  Favorites
 
@@ -22,11 +22,7 @@ function Post(props) {
 	return (
 		<div className='post'>
 			<button onClick={() => addFavorite()} className='postbutton'>
-				<img
-					className='favorite'
-					src={favorito}
-					alt='favorite'
-				/>
+				<img className='favorite' src={favorito} alt='favorite' />
 			</button>
 			<NavLink to={'/post/' + props.id}>
 				<div className='Link'>

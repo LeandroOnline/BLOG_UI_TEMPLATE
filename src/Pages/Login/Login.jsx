@@ -12,15 +12,16 @@ function Login() {
 	const [email, setEmail] = useState('');
 	const [password, setPasword] = useState('');
 
-	const loginOk = (e) => {
+	const loginOk = e => {
 		e.preventDefault();
 		axios
 			.post(API, { email, password })
 			.then(res =>
-				res.data === 'incorrect password' || res.data ==="user not found"
+				res.data === 'incorrect password' || res.data === 'user not found'
 					? window.alert('Usuario o Contraseña incorrecta, intente nuevamente')
 					: state.setState(true)
-			).then(()=>state? console.log('OK'): console.log('Error'));
+			)
+			.then(() => (state ? console.log('OK') : console.log('Error')));
 	};
 
 	return (
@@ -40,10 +41,7 @@ function Login() {
 						placeholder='Enter your password...'
 						type='password'
 					/>
-					<button
-						type='submit'
-						className='loginFormbutton'
-					>
+					<button type='submit' className='loginFormbutton'>
 						Login
 					</button>
 				</form>

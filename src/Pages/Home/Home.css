@@ -8,27 +8,25 @@
 }
 
 .header {
-	align-items: center;
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
 	height: 100%;
 }
 
 .header a {
-	width: 70%;
-}
-
-@media (max-width: 600px) {
-	.header a {
-		width: 100%;
-	}
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .img {
 	height: 130px;
 	object-fit: cover;
-	width: 100%;
+	width: 50%;
 	border-radius: 20px;
 }
 
@@ -81,5 +79,11 @@
 	}
 	100% {
 		transform: translateX(0%);
+	}
+}
+
+@media (max-width: 600px) {
+	.header a {
+		width: 100%;
 	}
 }

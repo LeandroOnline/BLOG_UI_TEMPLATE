@@ -2,8 +2,17 @@ import './Navbar.css';
 import { useContext } from 'react';
 import { context } from '../../App';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
+
+const API = 'http://localhost:3000/api/logout';
+
 
 function Top() {
+
+	const logout = ()=>{
+		axios.get(API).then(()=> console.log('token eliminado'))
+	}
+
 	const state = useContext(context);
 	return (
 		<div className='top'>
@@ -40,7 +49,7 @@ function Top() {
 				<>
 					<button
 						className=' inclined-button'
-						onClick={() => state.setState(false)}
+						onClick={() => {logout(); state.setState(false)}}
 					>
 						<i className='fas fa-sign-out-alt' />
 					</button>

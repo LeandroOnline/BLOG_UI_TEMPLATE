@@ -4,7 +4,7 @@ import { context } from '../../App';
 import axios from 'axios';
 import './Login.css';
 
-const API = 'http://new-server-alpha.vercel.app/api/login';
+const API = 'https://new-server-alpha.vercel.app/api/login';
 
 function Login() {
 	const state = useContext(context);

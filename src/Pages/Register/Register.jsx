@@ -1,5 +1,5 @@
 // import { Link } from 'react-router-dom';
-const API = 'http://localhost:3000/api/register';
+const API = 'http://new-server-alpha.vercel.app/api/register';
 
 function Register() {
 	return (

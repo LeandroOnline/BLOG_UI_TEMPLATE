@@ -16,7 +16,7 @@ function Register() {
 					className='loginForm'
 					action={API}
 					method='POST'
-					onSubmit={() => Controller()}
+					onClick={() => Controller()}
 				>
 					<label htmlFor=''>Email</label>
 					<input type='text' placeholder='Enter your email...' name='email' />

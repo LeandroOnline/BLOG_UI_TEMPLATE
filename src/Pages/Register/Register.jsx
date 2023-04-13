@@ -1,7 +1,14 @@
-// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 const API = 'https://new-server-alpha.vercel.app/api/register';
+const navigate = useNavigate();
 
 function Register() {
+
+	const Controller = ()=>{
+		navigate('/login')
+	}
+
 	return (
 		<div className='login'>
 			<div className='logincontainer'>
@@ -17,7 +24,7 @@ function Register() {
 					/>
 					<label htmlFor=''>Repeat password</label>
 					<input type='password' placeholder='Enter your password...' />
-					<button type='submit' className='loginFormbutton'>
+					<button type='submit' onClick={()=>Controller()} className='loginFormbutton'>
 						Register
 					</button>
 				</form>

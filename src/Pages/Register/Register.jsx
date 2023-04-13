@@ -12,12 +12,7 @@ function Register() {
 		<div className='login'>
 			<div className='logincontainer'>
 				<span className='logintitle'>Register</span>
-				<form
-					className='loginForm'
-					action={API}
-					method='POST'
-					onClick={() => Controller()}
-				>
+				<form className='loginForm' action={API} method='POST'>
 					<label htmlFor=''>Email</label>
 					<input type='text' placeholder='Enter your email...' name='email' />
 					<label htmlFor=''>Password</label>
@@ -28,7 +23,11 @@ function Register() {
 					/>
 					<label htmlFor=''>Repeat password</label>
 					<input type='password' placeholder='Enter your password...' />
-					<button type='submit' className='loginFormbutton'>
+					<button
+						type='submit'
+						className='loginFormbutton'
+						onClick={() => Controller()}
+					>
 						Register
 					</button>
 				</form>

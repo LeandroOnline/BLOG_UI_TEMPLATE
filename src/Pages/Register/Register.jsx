@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
 const API = 'https://new-server-alpha.vercel.app/api/register';
-const navigate = useNavigate();
 
 function Register() {
+	const navigate = useNavigate();
 	const Controller = () => {
 		navigate('/login');
 	};
